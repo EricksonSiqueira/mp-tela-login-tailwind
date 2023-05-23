@@ -7,4 +7,28 @@ git diff HEAD --quiet ||
   false;
 )
 
+npm run type-check || 
+(
+  echo "Type checking failed. Please fix the errors and try again."
+  false;
+)
+
+npm run format || 
+(
+  echo "Formatting failed. Please fix the errors and try again."
+  false;
+)
+
+npm run lint || 
+(
+  echo "Linting failed. Please fix the errors and try again."
+  false;
+)
+
+npm run test || 
+(
+  echo "Tests failed. Please fix the errors and try again."
+  false;
+)
+
 echo "All checks passed. Committing..."

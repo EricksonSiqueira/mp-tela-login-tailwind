@@ -9,7 +9,7 @@ describe(`Home`, () => {
 
     const heading = screen.getByRole(`heading`, {
       level: 1,
-      name: `Tela de login mais bonitona`,
+      name: `Faça seu login`,
     });
 
     expect(heading).toBeInTheDocument();

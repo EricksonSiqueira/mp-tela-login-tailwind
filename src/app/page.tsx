@@ -1,9 +1,9 @@
+import Login from '@/components/Login';
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="flex flex-col items-center justify-center">
-        <h1>Tela de login mais bonitona</h1>
-      </div>
+    <main className="flex min-h-screen flex-column justify-center bg-gradient-to-b from-gray-950 to-violet-950 py-12 px-6">
+      <Login />
     </main>
   );
 }

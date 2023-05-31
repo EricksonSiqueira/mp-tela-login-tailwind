@@ -2,7 +2,8 @@
 
 import { memo } from 'react';
 import { useForm } from 'react-hook-form';
-import { BiPlanet } from 'react-icons/bi';
+import { FaLock } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
 
 import { loginSchema } from '@/yup/schema';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -25,13 +26,10 @@ function Login() {
 
   return (
     <div
-      className="flex-col align-top w-full h-96 rounded-2xl"
+      className="flex-col align-top w-full h-96 rounded-2xl font-bold"
       onSubmit={handleSubmit(onLoginSubmit)}
     >
-      <h1 className="text-4xl text-gray-100 text-center">
-        Faça seu login
-        {/* <BiPlanet size={20} className="text-violet-700" /> */}
-      </h1>
+      <h1 className="text-4xl text-gray-900 text-center">Faça seu login</h1>
       <form
         className="flex flex-col items-start mt-12"
         onSubmit={handleSubmit(onLoginSubmit)}
@@ -41,11 +39,13 @@ function Login() {
           register={register(`email`)}
           label="Email"
           error={errors.email?.message as string}
+          StartIcon={<HiOutlineMail className="text-gray-400" size={16} />}
         />
         <LoginInput
-          placeholder="Sua senha..."
+          placeholder="sua senha"
           register={register(`password`)}
           error={errors.password?.message as string}
+          StartIcon={<FaLock className="text-gray-400" size={12} />}
         />
         <button type="submit" className="w-full bg-indigo-500 h-12 rounded-sm">
           Enviar

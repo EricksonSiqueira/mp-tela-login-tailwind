@@ -16,6 +16,10 @@ module.exports = {
         'dark-purple': '#0C1445',
         'medium-purple': '#471E54',
         'label-bg': '#08081B',
+        'primary-blue': '#6366EE',
+      },
+      boxShadow: {
+        blue: '0 0 4px 2px #6366EE',
       },
     },
   },

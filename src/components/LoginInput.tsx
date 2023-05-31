@@ -20,7 +20,6 @@ function LoginInput({
   ...rest
 }: LoginInputProps) {
   const [focused, setFocused] = useState(false);
-  const teste = focused ? `border-blue-500 shadow-blue` : `border-gray-400`;
 
   return (
     <div

@@ -21,6 +21,9 @@ module.exports = {
       boxShadow: {
         blue: '0 0 4px 2px #6366EE',
       },
+      animation: {
+        'spin-fast': 'spin 0.6s linear infinite',
+      },
     },
   },
   plugins: [],

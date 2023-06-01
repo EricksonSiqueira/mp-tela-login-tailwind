@@ -1,6 +1,6 @@
 'use client';
 
-import { memo } from 'react';
+import { memo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaLock } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
@@ -8,6 +8,7 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { loginSchema } from '@/yup/schema';
 import { yupResolver } from '@hookform/resolvers/yup';
 
+import ButtonSubmit from './ButtonSubmit';
 import LoginInput from './LoginInput';
 
 function Login() {
@@ -20,8 +21,12 @@ function Login() {
     formState: { errors },
   } = useForm(formOptions);
 
+  const [isSubmiting, setIsSubmiting] = useState(false);
+
   const onLoginSubmit = (data: any) => {
+    setIsSubmiting(true);
     console.log(`data`, data);
+    setIsSubmiting(false);
   };
 
   return (
@@ -44,12 +49,15 @@ function Login() {
         <LoginInput
           placeholder="sua senha"
           register={register(`password`)}
+          label="Senha"
+          isPassword
           error={errors.password?.message as string}
           StartIcon={<FaLock className="text-gray-400" size={12} />}
         />
-        <button type="submit" className="w-full bg-indigo-500 h-12 rounded-sm">
-          Enviar
-        </button>
+        <ButtonSubmit
+          className="flex justify-center items-center w-full bg-primary-blue h-12 rounded-sm text-white font-semibold"
+          isSubmiting={isSubmiting}
+        />
       </form>
     </div>
   );

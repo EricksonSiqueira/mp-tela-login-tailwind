@@ -76,7 +76,7 @@ describe(`hooks`, () => {
 
     test(`when userAgent prop is falsy should return mobile state`, () => {
       const expectedObject = {
-        userAgent: undefined,
+        userAgent: null,
         devices: { isMobile: true, isTablet: false, isDesktop: false },
       };
 

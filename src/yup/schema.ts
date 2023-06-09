@@ -11,4 +11,5 @@ export const passwordValidation = Yup.string().required(
 export const loginSchema = Yup.object().shape({
   email: emailValidation,
   password: passwordValidation,
+  rememberMe: Yup.boolean(),
 });

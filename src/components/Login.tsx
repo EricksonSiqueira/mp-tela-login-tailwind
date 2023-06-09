@@ -71,12 +71,28 @@ function Login() {
             error={errors.password?.message}
             StartIcon={<FaLock className="text-gray-400" size={12} />}
           />
-          <Link
-            href="#"
-            className="text-sm text-gray-400 mt-2 font-normal w-full text-end"
-          >
-            Esqueci minha senha
-          </Link>
+          <div className="w-full flex justify-between mt-2">
+            <label
+              htmlFor="remenberMe"
+              className="flex w-full items-center cursor-pointer"
+            >
+              <input
+                id="remenberMe"
+                type="checkbox"
+                className="mr-2"
+                {...register(`rememberMe`)}
+              />
+              <span className="text-sm font-normal text-gray-400">
+                Lembrar de mim
+              </span>
+            </label>
+            <Link
+              href="#"
+              className="text-sm text-gray-400 font-normal w-full text-end"
+            >
+              Esqueci minha senha
+            </Link>
+          </div>
           <ButtonSubmit
             className="flex justify-center items-center w-full bg-primary-blue h-12 rounded-sm text-white font-semibold transition ease-in-out delay-150 hover:bg-primary-blue-light mt-8 mb-10"
             isSubmiting={isSubmiting}

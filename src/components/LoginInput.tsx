@@ -10,6 +10,7 @@ export interface LoginInputProps extends HTMLAttributes<HTMLElement> {
   isPassword?: boolean;
   register: UseFormRegisterReturn;
   StartIcon?: JSX.Element;
+  wrapperClassName?: string;
 }
 
 function LoginInput({
@@ -20,6 +21,7 @@ function LoginInput({
   register,
   isPassword = false,
   StartIcon,
+  wrapperClassName = ``,
   ...rest
 }: LoginInputProps) {
   const [focused, setFocused] = useState(false);
@@ -27,9 +29,9 @@ function LoginInput({
 
   return (
     <div
-      className={`border-solid border-gray-400 border w-full mb-9 rounded-md h-12 relative flex items-center bg-white ${
-        focused && `border-blue-500 shadow-blue`
-      } ${error && `border-red-600`}}`}
+      className={`border-solid border-gray-400 border w-full rounded-md h-12 relative flex items-center bg-white ${wrapperClassName} ${
+        focused && !error ? `border-blue-500 shadow-blue` : ``
+      } ${error ? `border-red-600` : ``} }`}
     >
       {label && (
         <span className="absolute text-gray-900 -top-4 left-1 bg-white rounded-lg px-2 text-sm h-6 font-normal">

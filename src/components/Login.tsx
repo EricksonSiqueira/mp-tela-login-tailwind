@@ -22,7 +22,11 @@ import LoginInput from './LoginInput';
 
 type LoginForm = InferType<typeof loginSchema>;
 
-function Login() {
+export interface LoginProps {
+  userAgent: string | null;
+}
+
+function Login({ userAgent }: LoginProps) {
   const formOptions = {
     resolver: yupResolver(loginSchema),
   };
@@ -34,7 +38,7 @@ function Login() {
 
   const [isSubmiting, setIsSubmiting] = useState(false);
 
-  const { isMobile } = useWindowSize();
+  const { isMobile } = useWindowSize(userAgent);
 
   const onLoginSubmit = (data: LoginForm) => {
     setIsSubmiting(true);

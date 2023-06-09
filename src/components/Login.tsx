@@ -46,13 +46,13 @@ function Login() {
 
   return (
     <div
-      className="flex flex-col align-top w-full h-full rounded-2xl font-bold justify-center items-center lg:flex-row  lg:h-screen lg:w-screen"
+      className="flex flex-col align-top w-full h-full rounded-2xl font-bold justify-center items-center md:flex-row  md:h-screen md:w-screen"
       onSubmit={handleSubmit(onLoginSubmit)}
     >
-      <div className="py-12 px-6 h-full w-full flex flex-col lg:w-5/12  justify-center items-center">
+      <div className="py-12 px-6 h-full w-full flex flex-col md:w-5/12  justify-center items-center">
         <h1 className="text-4xl text-gray-900 text-center">Faça seu login</h1>
         <form
-          className="flex flex-col items-start mt-12 w-full lg:max-w-md"
+          className="flex flex-col items-start mt-12 w-full md:max-w-md"
           onSubmit={handleSubmit(onLoginSubmit)}
         >
           <LoginInput

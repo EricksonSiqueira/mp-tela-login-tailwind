@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import { getUserAgentReduxState, getWidthForUseWindowSize } from './utils';
+
 export interface WindowSizes {
   width: number;
   height: number;
@@ -9,15 +11,15 @@ export interface WindowSizes {
   isTablet: boolean;
 }
 
-const useWindowSize = () => {
-  const isMobileRedux = true;
-  const isTabletRedux = false;
-  const isDesktopRedux = false;
-  const isMobile = !!isMobileRedux;
+const useWindowSize = (userAgent: string | null) => {
+  const userAgentState = getUserAgentReduxState(userAgent);
+  const isMobileRedux = userAgentState.devices.isMobile;
+  const isTabletRedux = userAgentState.devices.isTablet;
+  const isDesktopRedux = userAgentState.devices.isDesktop;
   const [windowSize, setWindowSize] = useState<WindowSizes>({
-    width: 360,
+    width: getWidthForUseWindowSize(isDesktopRedux, isTabletRedux),
     height: 0,
-    isMobile,
+    isMobile: isMobileRedux,
     isHorizontal: false,
     isDesktop: isDesktopRedux,
     isTablet: isTabletRedux,

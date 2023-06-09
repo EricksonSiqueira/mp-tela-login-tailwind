@@ -9,7 +9,7 @@ export interface LoginInputProps extends HTMLAttributes<HTMLElement> {
   placeholder: string;
   isPassword?: boolean;
   register: UseFormRegisterReturn;
-  StartIcon?: any;
+  StartIcon?: JSX.Element;
 }
 
 function LoginInput({

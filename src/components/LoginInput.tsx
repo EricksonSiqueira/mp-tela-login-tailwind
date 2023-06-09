@@ -43,6 +43,17 @@ function LoginInput({
         </div>
       )}
 
+      <input
+        disabled={disabled}
+        placeholder={placeholder}
+        type={showPassword ? `password` : `text`}
+        onFocus={() => setFocused(true)}
+        className=" w-full h-12 bg-transparent text-gray-900 font-normal placeholder:text-gray-400 placeholder:text-sm placeholder:font-normal focus:outline-none pl-2"
+        {...rest}
+        {...register}
+        onBlur={() => setFocused(false)}
+      />
+
       {isPassword && (
         <button
           type="button"
@@ -56,17 +67,6 @@ function LoginInput({
           )}
         </button>
       )}
-
-      <input
-        disabled={disabled}
-        placeholder={placeholder}
-        type={showPassword ? `password` : `text`}
-        onFocus={() => setFocused(true)}
-        className=" w-full h-12 bg-transparent text-gray-900 font-normal placeholder:text-gray-400 placeholder:text-sm placeholder:font-normal focus:outline-none pl-2"
-        {...rest}
-        {...register}
-        onBlur={() => setFocused(false)}
-      />
 
       {error && (
         <p className="text-red-600 text-xs absolute left-2 -bottom-5">

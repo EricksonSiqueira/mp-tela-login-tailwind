@@ -17,8 +17,8 @@ import LoginImage from '@/public/images/sign-in-rafiki.svg';
 import { loginSchema } from '@/yup/schema';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import ButtonSubmit from './ButtonSubmit';
-import LoginInput from './LoginInput';
+import ButtonSubmit from '../ButtonSubmit';
+import LoginInput from '../LoginInput';
 
 type LoginForm = InferType<typeof loginSchema>;
 

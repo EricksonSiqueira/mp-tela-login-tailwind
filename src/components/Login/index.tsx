@@ -65,7 +65,6 @@ function Login({ userAgent }: LoginProps) {
             label="Email"
             error={errors.email?.message}
             StartIcon={<HiOutlineMail className="text-gray-400" size={16} />}
-            wrapperClassName="mb-10"
           />
           <LoginInput
             placeholder="sua senha"
@@ -74,6 +73,7 @@ function Login({ userAgent }: LoginProps) {
             isPassword
             error={errors.password?.message}
             StartIcon={<FaLock className="text-gray-400" size={12} />}
+            wrapperClassName="mt-6"
           />
           <div className="w-full flex justify-between mt-2">
             <label

@@ -24,6 +24,15 @@ module.exports = {
       },
       animation: {
         'spin-fast': 'spin 0.6s linear infinite',
+        'float': 'float 3s ease-in-out infinite',
+        'float-slow': 'float 4.5s ease-in-out infinite',
+      },
+      keyframes: {
+        float: {
+          '0%': { transform: 'translatey(0px)', },
+          '50%': { transform: 'translatey(-30px)' },
+          '100%': { transform: 'translatey(0px)' },
+        },
       },
     },
   },

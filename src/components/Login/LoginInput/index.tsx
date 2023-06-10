@@ -41,7 +41,10 @@ function LoginInput({
         )}
 
         {StartIcon && (
-          <div className="h-full flex items-center justify-center pl-2">
+          <div
+            className="h-full flex items-center justify-center pl-2"
+            data-testid="start-icon-wrapper"
+          >
             {StartIcon}
           </div>
         )}
@@ -61,12 +64,21 @@ function LoginInput({
           <button
             type="button"
             className="absolute right-2"
+            aria-label="mostrar/esconder senha"
             onClick={() => setShowPassword(!showPassword)}
           >
             {showPassword ? (
-              <AiOutlineEye size={20} color="#9CA3AF" />
+              <AiOutlineEye
+                size={20}
+                color="#9CA3AF"
+                data-testid="open-eye-icon"
+              />
             ) : (
-              <AiOutlineEyeInvisible size={20} color="#9CA3AF" />
+              <AiOutlineEyeInvisible
+                size={20}
+                color="#9CA3AF"
+                data-testid="invisible-eye-icon"
+              />
             )}
           </button>
         )}

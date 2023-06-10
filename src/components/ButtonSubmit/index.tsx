@@ -12,7 +12,7 @@ function ButtonSubmit({ isSubmiting = false, ...rest }: ButtonProps) {
       {isSubmiting ? (
         <Spinner className="text-white animate-spin-fast" size={26} />
       ) : (
-        `Enviar`
+        `Entrar`
       )}
     </button>
   );

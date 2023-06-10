@@ -97,7 +97,7 @@ function Login({ userAgent }: LoginProps) {
             </Link>
           </div>
           <ButtonSubmit
-            className="flex justify-center items-center w-full bg-primary-blue h-12 rounded-sm text-white font-semibold transition ease-in-out delay-150 hover:bg-primary-blue-light mt-8 mb-10"
+            className="flex justify-center items-center w-full bg-primary-blue h-12 rounded-sm text-white font-semibold transition ease-in-out delay 100 hover:bg-primary-blue-light mt-8 mb-10"
             isSubmiting={isSubmiting}
           />
         </form>

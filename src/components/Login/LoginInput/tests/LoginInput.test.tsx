@@ -1,4 +1,5 @@
-import { render, screen, cleanup, fireEvent } from '@testing-library/react';
+import { render, screen, cleanup } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import LoginInput, { LoginInputProps } from '..';
 
@@ -93,7 +94,7 @@ describe(`LoginInput`, () => {
     ).toBeInTheDocument();
   });
 
-  test(`should change input type to text when clicking on the button with name "mostrar/esconder senha" and isPassword is equal to true `, () => {
+  test(`should change input type to text when clicking on the button with name "mostrar/esconder senha" and isPassword is equal to true `, async () => {
     const modifiedProps = {
       ...mockedProps,
       isPassword: true,
@@ -105,14 +106,14 @@ describe(`LoginInput`, () => {
       name: `mostrar/esconder senha`,
     });
 
-    fireEvent.click(button);
+    await userEvent.click(button);
 
     const input = screen.getByPlaceholderText(`placeholder`);
 
     expect(input).toHaveAttribute(`type`, `text`);
   });
 
-  test(`when isPassword is equal to true and clicking on the button with name "mostrar/esconder senha" 2 times in a row, should change input to type to text and then to password`, () => {
+  test(`when isPassword is equal to true and clicking on the button with name "mostrar/esconder senha" 2 times in a row, should change input to type to text and then to password`, async () => {
     const modifiedProps = {
       ...mockedProps,
       isPassword: true,
@@ -124,13 +125,13 @@ describe(`LoginInput`, () => {
       name: `mostrar/esconder senha`,
     });
 
-    fireEvent.click(button);
+    await userEvent.click(button);
 
     const input = screen.getByPlaceholderText(`placeholder`);
 
     expect(input).toHaveAttribute(`type`, `text`);
 
-    fireEvent.click(button);
+    await userEvent.click(button);
 
     expect(input).toHaveAttribute(`type`, `password`);
   });
@@ -149,7 +150,7 @@ describe(`LoginInput`, () => {
     expect(eyeIcon).toBeInTheDocument();
   });
 
-  test(`when isPassword is equal to true and clicking on the button with name "mostrar/esconder senha" should change icon from element with data-testid "open-eye-icon" to "invisible-eye-icon"`, () => {
+  test(`when isPassword is equal to true and clicking on the button with name "mostrar/esconder senha" should change icon from element with data-testid "open-eye-icon" to "invisible-eye-icon"`, async () => {
     const modifiedProps = {
       ...mockedProps,
       isPassword: true,
@@ -166,7 +167,7 @@ describe(`LoginInput`, () => {
       name: `mostrar/esconder senha`,
     });
 
-    fireEvent.click(button);
+    await userEvent.click(button);
 
     const eyeInvisibleIcon = screen.getByTestId(`invisible-eye-icon`);
 

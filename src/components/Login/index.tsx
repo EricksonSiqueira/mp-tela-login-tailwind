@@ -7,18 +7,17 @@ import { useForm } from 'react-hook-form';
 import { FaLock } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { InferType } from 'yup';
 
 import useWindowSize from '@/hooks/useWindowSize';
-import LoginImage from '@/public/images/sign-in-rafiki.svg';
 import { loginSchema } from '@/yup/schema';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import ButtonSubmit from '../ButtonSubmit';
-import LoginInput from '../LoginInput';
+import DesktopSideLogin from './DesktopSideLogin';
+import LoginInput from './LoginInput';
 
 type LoginForm = InferType<typeof loginSchema>;
 
@@ -107,22 +106,7 @@ function Login({ userAgent }: LoginProps) {
           <span className="text-primary-blue">Crie agora</span>
         </Link>
       </div>
-      {!isMobile && (
-        <div className="w-7/12 h-full bg-primary-blue rounded-l-lg flex flex-col items-center justify-center">
-          <div className="w-96 h-96 relative animate-float-slow">
-            <Image src={LoginImage} alt="nada" fill />
-          </div>
-          <a
-            href="https://storyset.com/user"
-            className="text-xs text-gray-300 pb-6"
-          >
-            User illustrations by Storyset
-          </a>
-          <h2 className="text-slate-50 text-xl max-w-xs text-center">
-            A melhor experiencia de login que você já teve na sua vida.
-          </h2>
-        </div>
-      )}
+      {!isMobile && <DesktopSideLogin />}
     </div>
   );
 }

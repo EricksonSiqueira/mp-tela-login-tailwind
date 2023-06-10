@@ -6,7 +6,10 @@ import LoginImage from '@/public/images/sign-in-rafiki.svg';
 
 function DesktopSideLogin() {
   return (
-    <div className="w-7/12 h-full bg-primary-blue rounded-l-lg flex flex-col items-center justify-center">
+    <div
+      className="w-7/12 h-full bg-primary-blue rounded-l-lg flex flex-col items-center justify-center"
+      data-testid="desktop-side-login"
+    >
       <div className="w-96 h-96 relative animate-float-slow">
         <Image
           src={LoginImage}

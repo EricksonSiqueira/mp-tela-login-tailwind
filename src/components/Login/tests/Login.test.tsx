@@ -45,7 +45,7 @@ describe(`Login`, () => {
     await userEvent.click(submitButton);
 
     expect(
-      screen.getByText(`É preciso preencher o campo de email.`)
+      screen.getByText(`É preciso preencher o campo de e-mail.`)
     ).toBeInTheDocument();
 
     expect(
@@ -61,7 +61,7 @@ describe(`Login`, () => {
     await userEvent.click(submitButton);
 
     expect(
-      screen.getByText(`É preciso preencher o campo de email.`)
+      screen.getByText(`É preciso preencher o campo de e-mail.`)
     ).toBeInTheDocument();
 
     expect(
@@ -80,7 +80,7 @@ describe(`Login`, () => {
     await userEvent.click(submitButton);
 
     expect(
-      screen.getByText(`O email informado não é válido.`)
+      screen.getByText(`O e-mail informado não é válido.`)
     ).toBeInTheDocument();
   });
 
@@ -97,7 +97,7 @@ describe(`Login`, () => {
     await userEvent.click(submitButton);
 
     expect(
-      screen.queryByText(`O email informado não é válido.`)
+      screen.queryByText(`O e-mail informado não é válido.`)
     ).not.toBeInTheDocument();
 
     expect(

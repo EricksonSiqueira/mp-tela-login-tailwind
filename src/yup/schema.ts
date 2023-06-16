@@ -1,8 +1,8 @@
 import * as Yup from 'yup';
 
 export const emailValidation = Yup.string()
-  .required(`É preciso preencher o campo de email.`)
-  .email(`O email informado não é válido.`);
+  .required(`É preciso preencher o campo de e-mail.`)
+  .email(`O e-mail informado não é válido.`);
 
 export const passwordValidation = Yup.string().required(
   `É preciso preencher o campo de senha.`

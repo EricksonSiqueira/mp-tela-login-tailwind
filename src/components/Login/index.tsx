@@ -61,7 +61,7 @@ function Login({ userAgent }: LoginProps) {
           <LoginInput
             placeholder="kaladin@gmail.com"
             register={register(`email`)}
-            label="Email"
+            label="E-mail"
             error={errors.email?.message}
             StartIcon={<HiOutlineMail className="text-gray-400" size={16} />}
           />

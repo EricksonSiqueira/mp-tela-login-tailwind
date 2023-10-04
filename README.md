@@ -10,6 +10,9 @@ Project made based in a [challenge from Codante](https://codante.io/mini-projeto
 - 🐶 Husky
 - Yup
 
+## 🎨 Figma
+[Project figma](https://www.figma.com/file/zhEDlAJwuiRjpQGBUf2lsX/Login?type=design&node-id=0-1&mode=design&t=xGq1hmXbO6CDgTt1-0)
+
 ## 🏃 How to run it
 
 ### Clone the repo

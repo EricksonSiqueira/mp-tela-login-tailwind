@@ -6,7 +6,6 @@ Project made based in a [challenge from Codante](https://codante.io/mini-projeto
 - <img align="center" alt="Erickson-Ts" height="20" width="20" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg"> TypeScript 
 - <img align="center" alt="Erickson-Next" height="20" width="20" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg"> Next.js 13 (With Server Components)
 - <img align="center" alt="Erickson-Tailwind" height="20" width="20" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg"> Tailwindcss
-- <img align="center" alt="Erickson-React" height="20" width="20" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"> React
 - <img align="center" alt="Erickson-Jest" height="20" width="20" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jest/jest-plain.svg"> Jest
 - 🐶 Husky
 

@@ -8,6 +8,7 @@ Project made based in a [challenge from Codante](https://codante.io/mini-projeto
 - <img align="center" alt="Erickson-Tailwind" height="20" width="20" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg"> Tailwindcss
 - <img align="center" alt="Erickson-Jest" height="20" width="20" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jest/jest-plain.svg"> Jest
 - 🐶 Husky
+- Yup
 
 ## 🏃 How to run it
 

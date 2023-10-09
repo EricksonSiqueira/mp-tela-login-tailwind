@@ -9,6 +9,7 @@ Project made based in a [challenge from Codante](https://codante.io/mini-projeto
 - <img align="center" alt="Erickson-Jest" height="20" width="20" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/jest/jest-plain.svg"> Jest
 - 🐶 Husky
 - Yup
+- React hook form
 
 ## 🎨 Figma
 [Project figma](https://www.figma.com/file/zhEDlAJwuiRjpQGBUf2lsX/Login?type=design&node-id=0-1&mode=design&t=xGq1hmXbO6CDgTt1-0)
